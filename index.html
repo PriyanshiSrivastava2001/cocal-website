@@ -26,6 +26,12 @@
         #form{
             font-size: 20px;
         }
+           label{
+           font-size: 25px;
+           font-family: 'Times New Roman', Times, serif;
+           font-style: italic;
+           font-weight: bold;
+       }
     </style>
 </head>
 
@@ -205,10 +211,10 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="container-fluid">
+   <div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-				<section ><br><br><br><br><br><br><br><br>
+				<section><br><br><br><br><br><br><br><br>
                     <h3 class="form-section-label" id="travel-label"><i class="fa fa-globe" aria-hidden="true"></i>
                         Travel</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         
@@ -223,23 +229,97 @@
 			</div>
             <div id="form">
                 <form>
-                    
-                    <div class="form-group">
-                        <label for="car">Annual miles driven on your car</label>
-                        <input class="form-control" id="car" type="number" min="0" step="1">
-                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
-                    </div><br>
-                    <div class="form-group">
-                        <label for="flights-4-less">Number of flights taken in the past year (4 hours or less)</label>
-                        <input class="form-control" id="flights-4-less" type="number" min="0" step="1">
-                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
-                    </div><br>
-                    <div class="form-group">
-                        <label for="flights-4-more">Number of flights taken in the past year (4 hours or more)</label>
-                        <input class="form-control" id="flights-4-more" type="number" min="0" step="1">
-                        <span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
-                    </div><br>
-                    <br><br>
+                    <section style="display: inline-block;">
+                        <div class="col-7">
+                            <label for="inlineFormInputGroupUsername" style="text-decoration: underline; font-weight: bolder;">FLIGHT</label>
+                        </div>
+                            <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">One Trip</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Multiple Trips</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Charter</label>
+                      </div>
+
+                      <div class="col-7">
+                        <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Round trip</option>
+                            <option value="1">One way</option>
+                            <option value="2">Multi-city</option>
+                        </select>
+                      </div><br>
+                      
+                      <div class="col-7">
+                        <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>No. of Passengers</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                      </div><br>
+                      <div class="col-7">
+                        <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Economy</option>
+                            <option value="1">Premium</option>
+                        </select>
+                      </div><br>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Where From</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Where To</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                </section>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <section style="display: inline-block; margin-top: 4px;">
+                    <div class="col-7">
+                        <label for="inlineFormInputGroupUsername" style="text-decoration: underline; font-weight: bolder;">CAR</label>
+                        <div class="input-group">
+                        <select class="form-select" id="inlineFormInputGroupUsername">
+                            <option selected>Car</option>
+                            <option value="1">Luxury</option>
+                            <option value="2">4x4</option>
+                            <option value="3">Van</option>
+                            <option value="4">Motorcycle</option>
+                            <option value="5">Hybrid</option>
+                        </select>
+                      </div><br>
+                      <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Calculate By</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Choose...</option>
+                          <option value="1">Distance</option>
+                          <option value="2">Hours</option>
+                        </select>
+                      </div><br>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Distance Driven</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Miles</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Kilometers</label>
+                      </div>
+                    </section>
+                    <br>
+                    <br>
                     <div class="col-7">
                         <label for="inlineFormInputGroupUsername">Plastic Bags</label>
                         <div class="input-group">
